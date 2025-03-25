@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import Select
 import pandas as pd
 
 file_path = 'teste.xlsx'
-df = pd.read_excel('C:\\Users\\User\\Music\\preeauto')
+df = pd.read_excel('')
                    
 Fornecedor = df['Fornecedor']
 NOTA = df['NOTA']
