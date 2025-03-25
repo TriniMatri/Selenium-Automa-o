@@ -15,7 +15,7 @@ excel = win32.Dispatch("Excel.Application")
 excel.Visible = False  # Rodar em segundo plano
 
 # Caminho da planilha no OneDrive (ajuste para o caminho correto no seu PC)
-caminho_planilha = r"C:\\Users\\Erivaldo\\OneDrive\\Documentos\\teste.xlsx"
+caminho_planilha = r""
 workbook = excel.Workbooks.Open(caminho_planilha)
 sheet = workbook.Sheets("teste")  # Ajuste o nome da aba
 
@@ -49,17 +49,17 @@ workbook.Close()
 excel.Quit()
 
 # Configuração do Selenium
-service = Service(r"C:\\Users\\Erivaldo\\Documents\\edgedriver_win64\\msedgedriver.exe")
+service = Service(r"")
 options = Options()
 
 # Abrindo o Forms
 driver = webdriver.Edge(service=service, options=options)
 options.add_argument('--disable-extensions')
-driver.get("https://forms.office.com/Pages/ResponsePage.aspx?id=HIFgbJ5zRECh04xWqKUMh5axnQPELMRLlJ1ME-h4TE1UM1JKOVhZNVI4V1BaR1lKR0tSREFSMDVPMC4u")
+driver.get("")
 
 # Entrar na conta para conseguir acesso ao Forms
-login = "03346804@sempreuninorte.com.br"
-senha = "28691901"
+login = ""
+senha = ""
 
 login_field = WebDriverWait(driver, 20).until(
     EC.element_to_be_clickable((By.XPATH, '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[3]/div/div/div/div[2]/div[2]/div/input[1]'))
