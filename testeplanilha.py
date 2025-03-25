@@ -3,7 +3,7 @@ import requests
 from io import BytesIO
 
 # URL do arquivo Excel no OneDrive ou SharePoint (verifique se a URL é pública ou com as permissões adequadas)
-url = "URL_PUBLICA_DA_PLANILHhttps://1drv.ms/x/s!ApqMDUsVdYgofNQ7Mkn0YdLvcro?e=W8HHbWA"
+url = ""
 
 # Enviar a requisição HTTP para obter o conteúdo da planilha
 response = requests.get(url)
