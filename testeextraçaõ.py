@@ -10,12 +10,12 @@ from selenium.webdriver.common.action_chains import ActionChains
 import win32com.client as win32
 from datetime import datetime
 
-service = Service(r"C:\\Users\\Erivaldo\\Documents\\edgedriver_win64\\msedgedriver.exe")
+service = Service(r"")
 options = Options()
-login = "03346804@sempreuninorte.com.br"
-senha = "28691901"
+login = ""
+senha = ""
 
-diretorio = r"C:\\Users\\Erivaldo\\Documents\\trabalho trini\\Notas teste"  # Ajustar diretório para teste
+diretorio = r""  # Ajustar diretório para teste
 nome_arquivo = f"03.05 NF {NOTA} F {CODFORN} {nome_form}.pdf"
 file_path = os.path.join(diretorio, nome_arquivo)
 
@@ -24,7 +24,7 @@ excel = win32.Dispatch("Excel.Application")
 excel.Visible = False  # Rodar em segundo plano
 
 # Caminho da planilha no OneDrive (ajuste para o caminho correto no seu PC)
-caminho_planilha = r"C:\\Users\\Erivaldo\\OneDrive\\Documentos\\teste.xlsx"
+caminho_planilha = r""
 workbook = excel.Workbooks.Open(caminho_planilha)
 sheet = workbook.Sheets("teste")  # Ajuste o nome da aba
 
