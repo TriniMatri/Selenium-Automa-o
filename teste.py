@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 
 # Caminho do driver do Edge
-service = Service(r"C:\\Users\\Erivaldo\\Documents\\edgedriver_win64\\msedgedriver.exe")
+service = Service(r"")
 options = Options()
 
 # Variáveis de dados
@@ -24,19 +24,19 @@ TIPOPAG = "BOLETO" #COLUNA 12 M
 NUMENTRA = "1010101010" #COLUNA 13 N
 DATAEMI = "18/03/2025" #COLUNA 17 R
 
-login = "03346804@sempreuninorte.com.br"
-senha = "28691901"
+login = ""
+senha = ""
 
 
 
-diretorio = r"C:\\Users\\Erivaldo\\Documents\\trabalho trini\\Notas teste"  # Ajustar diretório para teste
+diretorio = r""  # Ajustar diretório para teste
 nome_arquivo = f"03.05 NF {NOTA} F {CODFORN} {nome_form}.pdf"
 file_path = os.path.join(diretorio, nome_arquivo)
 
 # Abrindo o Forms
 driver = webdriver.Edge(service=service, options=options)
 options.add_argument('--disable-extensions')
-driver.get("https://forms.office.com/Pages/ResponsePage.aspx?id=HIFgbJ5zRECh04xWqKUMh5axnQPELMRLlJ1ME-h4TE1UM1JKOVhZNVI4V1BaR1lKR0tSREFSMDVPMC4u")
+driver.get("")
 
 # Entrar na conta para conseguir acesso ao Forms
 login_field = WebDriverWait(driver, 20).until(
@@ -64,9 +64,9 @@ submit_button = WebDriverWait(driver,5).until(
 )
 submit_button.click()
 
-# Escolhendo BEMOL
+
 opcaosetor = WebDriverWait(driver, 5).until(
-    EC.presence_of_element_located((By.XPATH, "//input[@value='BEMOL S.A']"))
+    EC.presence_of_element_located((By.XPATH, "//input[@value='']"))
 )
 opcaosetor.click()
 time.sleep(2)
